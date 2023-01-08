@@ -1,0 +1,46 @@
+{
+  "name": "iconfont-url",
+  "version": "0.0.1",
+  "description": "获取iconfont中项目图标的在线链接",
+  "sideEffect": false,
+  "author": "left0ver",
+  "homepage": "https://github.com/left0ver/iconfont-url#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/left0ver/iconfont-url.git"
+  },
+  "bugs": "https://github.com/left0ver/iconfont-url/issues",
+  "keywords": ["get-iconfont-url","iconfont-url","iconfont"],
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npx tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "pnpm build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/lodash.pick": "^4.4.7",
+    "axios": "^1.2.2",
+    "lodash.pick": "^4.4.0"
+  }
+}
