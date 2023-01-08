@@ -47,37 +47,4 @@ export async function getOnlineUrl(projectName: string, cookie?: string) {
 
 export type { FontUrl }
 
-getOnlineUrl('vue-admin', 'ctoken=6e1Yzhl3KHCdorMPV56Pv0iB; cna=W/3aGwMnGiYCAWVQeLRp6Skp; xlly_s=1; EGG_SESS_ICONFONT=LwyPfFe9mdLtPg5kAyRM2oKTWe0dYQN45w0qN-zVhK6dp-njsVT2v8vj0y7Na1xO_qxR0Q5yn44fvFMYv4dAbFkkPN7Q2SIT7WFQ5FO2LlJVKsCyelzFFL8JjTAVNK-3jyCRMmszG1y4c25mFifA0KCTRNGsC3yO4F5BQ7TmkGklE3PTdw0HJK8iKAk8vOfcosi1out1fHvBNMvkz8FNSQ==; u=8520645; u.sig=s3SVY9PtAbD8LE5GAHj0_MUPeCU3Mgt8M0-Qb1rj7jU; isg=BJqaOb9vrS-ymiGPprLwj1x860a8yx6l6FxzBaQTOi3bFzpRjFu1tdph5uOLtpY9').then((res) => console.log(res)).catch(err => console.log(err))
-// async function getProject(cookie: string) {
-//   if (cookie === '') {
-//     throw new Error('need cookie');
-//   }
-//   const cookieObj = parseCookie(cookie)
-//   const ctoken = cookieObj.ctoken
-//   if (!ctoken) {
-//     throw new Error("cookie 中缺少ctoken,或者 cookie 格式有误");
-//   }
-
-//   // 项目是不是自己创建的,1是自己创建的,2不是自己创建的,是自己参与的
-//   let isown_create = 1
-
-//   const allProject: AllProjectResult = {}
-//   try {
-//     const ownProject = await fetchProject(cookie,ctoken, isown_create)
-//     isown_create++;
-//     const corpProjects = await fetchProject(cookie,ctoken, isown_create)
-
-//     allProject.ownProject = ownProject
-//     allProject.corpProjects = corpProjects
-
-//   } catch (error) {
-//     console.error(error)
-//   }
-//   return allProject
-
-// }
-
-// getProject('ctoken=6e1Yzhl3KHCdorMPV56Pv0iB; cna=W/3aGwMnGiYCAWVQeLRp6Skp; xlly_s=1; EGG_SESS_ICONFONT=LwyPfFe9mdLtPg5kAyRM2oKTWe0dYQN45w0qN-zVhK6dp-njsVT2v8vj0y7Na1xO_qxR0Q5yn44fvFMYv4dAbFkkPN7Q2SIT7WFQ5FO2LlJVKsCyelzFFL8JjTAVNK-3jyCRMmszG1y4c25mFifA0KCTRNGsC3yO4F5BQ7TmkGklE3PTdw0HJK8iKAk8vOfcosi1out1fHvBNMvkz8FNSQ==; u=8520645; u.sig=s3SVY9PtAbD8LE5GAHj0_MUPeCU3Mgt8M0-Qb1rj7jU; isg=BJqaOb9vrS-ymiGPprLwj1x860a8yx6l6FxzBaQTOi3bFzpRjFu1tdph5uOLtpY9').then(res => console.log(res)).catch(err => console.log(err))
-
-
 
