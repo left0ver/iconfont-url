@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "timezone":"Asia/Shanghai",
+  "schedule":"after 10pm and before 5am",
+  "reviewers": ["left0ver"],
+  "prHourlyLimit": 10,
+  "lockFileMaintenance": { "enabled": true },
+  "rangeStrategy": "update-lockfile",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ]
+}
+ 
