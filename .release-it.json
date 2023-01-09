@@ -8,13 +8,11 @@
     "requireCommits": true
   },
   "hooks": {
-    "before:init": ["git pull", "npm run build"],
-    "after:github": "npx changelogithub"
+    "before:init": ["git pull", "npm run build"]
   },
   "github": {
-    "release": true,
-    "releaseName": "v${version}",
-    "autoGenerate": true
+    "release": false,
+    "releaseName": "v${version}"
   },
   "npm": {
     "publish": true
