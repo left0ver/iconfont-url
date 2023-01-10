@@ -13,7 +13,7 @@ import type { FontDetail, FontUrl } from './type'
  * @return  项目中没有图标将return null
  */
 export async function getOnlineUrl(projectName: string, cookie?: string) {
-  const finalCookie = process.env.FONT_COOKIE || cookie
+  const finalCookie = process.env.ICONFONT_COOKIE || cookie
 
   if (!finalCookie) {
     throw new Error(`cookie not find  in  environment variable , please input cookie or set FONT_COOKIE environment variable `);
