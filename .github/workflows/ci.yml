@@ -31,6 +31,8 @@ jobs:
 
       - name: Typecheck
         run: pnpm  typecheck
+      - name: lint
+        run: pnpm lint
 
   # test:
   #   runs-on: ${{ matrix.os }}
