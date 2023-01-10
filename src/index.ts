@@ -27,9 +27,8 @@ export async function getOnlineUrl(projectName: string, cookie?: string) {
     curProject = corpProjects.find((project) => project.name === projectName)
   }
   // 自己创建的项目中和自己参与的项目中都没找到该项目
-  if (!curProject) {
-    throw new Error(`this projectName:${projectName} not find`);
-  }
+  if (!curProject)
+    throw new Error(`not find the project named ${projectName}`)
 
   const pid = curProject.id
   const ctoken = parseCookie(finalCookie).ctoken
