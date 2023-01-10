@@ -16,6 +16,9 @@
     "iconfont"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "start": "esno src/index.ts",
     "typecheck": "tsc --noEmit",
