@@ -17,8 +17,6 @@
     "esModuleInterop": true,          
     "newLine": "lf",                               
     "noEmitOnError": true,                         
-    "preserveValueImports": true,                  
-    "isolatedModules": true,                       
     "allowSyntheticDefaultImports": true,          
     "preserveSymlinks": true,                      
     "forceConsistentCasingInFileNames": true,      
