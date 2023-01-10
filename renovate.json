@@ -4,8 +4,8 @@
     "config:base",
     ":disableDependencyDashboard"
   ],
-  "timezone":"Asia/Shanghai",
-  "schedule":"after 10pm and before 5am",
+  "timezone": "Asia/Shanghai",
+  "schedule": "after 10pm and before 5am",
   "assignees": [
     "renovate-bot"
   ],
@@ -18,4 +18,3 @@
     }
   ]
 }
- 

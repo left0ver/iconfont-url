@@ -5,18 +5,18 @@ export default defineConfig({
     // esm
     if (format === 'esm') {
       return {
-        js: `.mjs`
+        js: '.mjs',
       }
     }
     // global
-    if (format==='iife') {
+    if (format === 'iife') {
       return {
-        js: `.global.js`
+        js: '.global.js',
       }
     }
     // cjs
     return {
-      js: `.cjs`,
+      js: '.cjs',
     }
-  }
-}) 
+  },
+})

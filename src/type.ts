@@ -1,5 +1,5 @@
 interface ErrorInfo {
-  code: number,
+  code: number
   error_code?: string
   message?: string
 }
@@ -25,29 +25,27 @@ export interface ProjectResponse extends ErrorInfo {
   }
 }
 
-
 export interface AllProjectResult {
-  ownProjects?: ProjectInfo[],
+  ownProjects?: ProjectInfo[]
   corpProjects?: ProjectInfo[]
 }
 
-
 export interface FontDetail {
-  svg_file: string;
-  woff_file: string;
-  woff2_file: string;
-  eot_file: string;
-  ttf_file: string;
-  js_file: string;
-  css_file: string;
-  demo_file: string;
-  json_file: string;
-  id: number;
-  owner_id: number;
-  owner_type: string;
-  css_font_face_src: string;
-  createdAt: Date;
-  updatedAt: Date;
+  svg_file: string
+  woff_file: string
+  woff2_file: string
+  eot_file: string
+  ttf_file: string
+  js_file: string
+  css_file: string
+  demo_file: string
+  json_file: string
+  id: number
+  owner_id: number
+  owner_type: string
+  css_font_face_src: string
+  createdAt: Date
+  updatedAt: Date
 }
 
-export type FontUrl = Pick<FontDetail,'css_file'|'css_font_face_src'|'eot_file'| 'js_file' |'json_file'| 'svg_file' | 'ttf_file'|'woff2_file' | 'woff_file'>
+export type FontUrl = Pick<FontDetail, 'css_file' | 'css_font_face_src' | 'eot_file' | 'js_file' | 'json_file' | 'svg_file' | 'ttf_file' | 'woff2_file' | 'woff_file'>

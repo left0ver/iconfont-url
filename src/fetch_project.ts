@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { BASE_URL } from "./config";
-import type { ProjectResponse, ProjectInfo } from './type'
+import { BASE_URL } from './config'
+import type { ProjectInfo, ProjectResponse } from './type'
 
 export async function fetchProject(cookie: string, ctoken: string, isown_create: number) {
   let page = 1
@@ -9,20 +9,20 @@ export async function fetchProject(cookie: string, ctoken: string, isown_create:
 
   const result: ProjectInfo[] = []
   while (!isLastPage) {
-    const { data: ProjectResponse } = await axios.get<ProjectResponse>(`/user/myprojects.json`,
+    const { data: ProjectResponse } = await axios.get<ProjectResponse>('/user/myprojects.json',
       {
         baseURL: BASE_URL,
         params: { page, isown_create, t, ctoken },
         headers: {
           cookie,
-        }
+        },
       })
 
     const { data: ProjectResponseData, code, error_code = '', message = '' } = ProjectResponse
 
-    if (code !== 200) {
-      throw new Error(JSON.stringify({ message, error_code }));
-    }
+    if (code !== 200)
+      throw new Error(JSON.stringify({ message, error_code }))
+
     // 是否是最后一页
     if (ProjectResponseData.pageSize * ProjectResponseData.page > ProjectResponseData.count) {
       isLastPage = true
