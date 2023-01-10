@@ -1,9 +1,11 @@
 {
   "name": "iconfont-url",
+  "type": "module",
   "version": "0.0.1",
   "description": "获取iconfont中项目图标的在线链接",
   "sideEffect": false,
   "author": "left0ver",
+  "license": "MIT",
   "homepage": "https://github.com/left0ver/iconfont-url#readme",
   "repository": {
     "type": "git",
@@ -15,23 +17,14 @@
     "iconfont-url",
     "iconfont"
   ],
-  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "start": "esno src/index.ts",
-    "typecheck": "tsc --noEmit",
-    "build": "npx tsup src/index.ts --format cjs,esm --dts --clean",
-    "prepublishOnly": "pnpm build",
-    "watch": "esno watch src/index.ts",
-    "release": "release-it"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -40,17 +33,28 @@
   "files": [
     "dist"
   ],
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^18.11.18",
-    "esno": "^0.16.3",
-    "release-it": "^15.6.0",
-    "tsup": "^6.5.0",
-    "typescript": "^4.9.4"
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "start": "esno src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npx tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "pnpm build",
+    "watch": "esno watch src/index.ts",
+    "release": "release-it"
   },
   "dependencies": {
     "@types/lodash.pick": "^4.4.7",
     "axios": "^1.2.2",
     "lodash.pick": "^4.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.1",
+    "@types/node": "^18.11.18",
+    "eslint": "^8.31.0",
+    "esno": "^0.16.3",
+    "release-it": "^15.6.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
   }
 }
