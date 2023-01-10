@@ -8,8 +8,8 @@ import type { FontDetail, FontUrl } from './type'
 
 /**
  * @description 获取iconfont的项目的字体图标的在线链接
- * @param {string} projectName
- * @param {string} [cookie] 可选,先从环境变量中读取FONT_COOKIE的值,没有则再读取传入的cookie
+ * @param {string} projectName iconfont的项目名称,自己拥有的项目或者自己参与的项目
+ * @param {string} [cookie] 可选,先从环境变量中读取ICONFONT_COOKIE的值,没有则再读取传入的cookie
  * @return  项目中没有图标将return null
  */
 export async function getOnlineUrl(projectName: string, cookie?: string) {

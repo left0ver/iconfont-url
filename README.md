@@ -4,13 +4,22 @@
 
 # Why
 
-项目中使用 CDN 的方式引入字体图标,正常情况下我们每次更新图标之后就要重新手动复制 iconfont 的在线链接,通过该项目,我们可以使用代码直接获取 iconfont 的在线链接,然后通过 webpack 的插件自动生成对应的 script 标签
+项目中使用 CDN 的方式引入字体图标,正常情况下我们每次更新图标之后就要重新手动复制 iconfont 的在线链接,通过该项目,我们可以使用代码直接获取 [iconfont](https://www.iconfont.cn/) 的在线链接,然后通过 webpack 的插件自动生成对应的 script 标签
+
+# Install
+```shell
+npm i iconfont-url
+# or
+yarn add iconfont-url
+```
 
 # Usage
 
 ```typescript
 import { getOnlineUrl } from 'iconfont-url'
 
+// projectName: required, iconfont的项目名称,自己拥有的项目或者自己参与的项目
+//     cookie : optional , 先从环境变量中读取ICONFONT_COOKIE的值,没有则再读取传入的cookie,二者必须要有一个
 getOnlineUrl('your project name ', 'your cookie')
 ```
 
