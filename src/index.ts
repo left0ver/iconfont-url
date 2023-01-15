@@ -1,4 +1,3 @@
-import process from 'process'
 import axios from 'axios'
 import pick from 'lodash.pick'
 import { parseCookie } from './parse_cookie'
@@ -9,16 +8,14 @@ import type { FontDetail, FontUrl } from './type'
 /**
  * @description 获取iconfont的项目的字体图标的在线链接
  * @param {string} projectName iconfont的项目名称,自己拥有的项目或者自己参与的项目
- * @param {string} [cookie] 可选,先从环境变量中读取ICONFONT_COOKIE的值,没有则再读取传入的cookie
+ * @param {string} cookie https://www.iconfont.cn 的 cookie
  * @return  项目中没有图标将return null
  */
-export async function getOnlineUrl(projectName: string, cookie?: string) {
-  const finalCookie = process.env.ICONFONT_COOKIE || cookie
+export async function getOnlineUrl(projectName: string, cookie: string) {
+  if (!cookie || !projectName)
+    throw new Error('projectName and cookie field is required')
 
-  if (!finalCookie)
-    throw new Error('cookie not find  in  environment variable , please input cookie or set FONT_COOKIE environment variable ')
-
-  const { ownProjects = [], corpProjects = [] } = await getProject(finalCookie)
+  const { ownProjects = [], corpProjects = [] } = await getProject(cookie)
 
   let curProject = ownProjects.find(project => project.name === projectName)
   // 在自己创建的项目中没找到该项目
@@ -30,7 +27,7 @@ export async function getOnlineUrl(projectName: string, cookie?: string) {
     throw new Error(`not find the project named ${projectName}`)
 
   const pid = curProject.id
-  const ctoken = parseCookie(finalCookie).ctoken
+  const ctoken = parseCookie(cookie).ctoken
   const t = new Date().getTime()
   const { data: detailData } = await axios.get('/project/detail.json', { baseURL: BASE_URL, params: { pid, ctoken, t }, headers: { cookie } })
 

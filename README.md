@@ -19,7 +19,7 @@ yarn add iconfont-url
 import { getOnlineUrl } from 'iconfont-url'
 
 // projectName: required, iconfont的项目名称,自己拥有的项目或者自己参与的项目
-//     cookie : optional , 先从环境变量中读取ICONFONT_COOKIE的值,没有则再读取传入的cookie,二者必须要有一个
+//     cookie : required , https://www.iconfont.cn 站点 的 cookie
 getOnlineUrl('your project name ', 'your cookie')
 ```
 
@@ -31,7 +31,6 @@ getOnlineUrl('your project name ', 'your cookie')
 # TODO
 
 1. - [ ] add unit test
-2. - [ ] add a example
 
 # LICENSE
 
