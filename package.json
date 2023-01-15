@@ -1,7 +1,7 @@
 {
   "name": "iconfont-url",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "获取iconfont中项目图标的在线链接",
   "sideEffect": false,
   "author": "left0ver",
