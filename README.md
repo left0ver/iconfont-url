@@ -23,6 +23,10 @@ import { getOnlineUrl } from 'iconfont-url'
 getOnlineUrl('your project name ', 'your cookie')
 ```
 
+# with Webpack
+
+你可以使用[iconfont-url-plugin](https://github.com/left0ver/iconfont-url-plugin),该 webpack 插件可以获取 iconfont 在线链接并将对应的 html 标签自动注入到生成的 html 中
+
 # get cookie
 
 登录 [iconfont](https://www.iconfont.cn/) , 打开网络面板,随便找一个请求,复制 cookie
