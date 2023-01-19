@@ -21,6 +21,21 @@ import { getOnlineUrl } from 'iconfont-url'
 // projectName: required, iconfont的项目名称,自己拥有的项目或者自己参与的项目
 //     cookie : required , https://www.iconfont.cn 站点 的 cookie
 getOnlineUrl('your project name ', 'your cookie')
+
+// return   promise<FontUrl| null>
+
+type FontUrl= {
+  svg_file: string
+  woff_file: string
+  woff2_file: string
+  eot_file: string
+  ttf_file: string
+  js_file: string
+  css_file: string
+  json_file: string
+  css_font_face_src: string
+}
+
 ```
 
 # with Webpack
