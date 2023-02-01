@@ -9,6 +9,11 @@
   "assignees": [
     "renovate-bot"
   ],
+  "ignoreDeps": [
+    "@left0ver/eslint-config-ts",
+    "@left0ver/eslint-config-vue",
+    "@left0ver/eslint-config-react"
+  ],
   "reviewers": ["left0ver"],
   "prHourlyLimit": 10,
   "rangeStrategy": "update-lockfile",
