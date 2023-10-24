@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@left0ver/eslint-config-ts': ^0.0.2
   '@types/lodash.pick': ^4.4.7
-  '@types/node': ^18.11.18
+  '@types/node': ^20.0.0
   axios: ^1.2.2
   eslint: ^8.31.0
   esno: ^0.16.3
@@ -19,7 +19,7 @@ dependencies:
 devDependencies:
   '@left0ver/eslint-config-ts': 0.0.2_iukboom6ndih5an6iafl45j2fe
   '@types/lodash.pick': 4.4.7
-  '@types/node': 18.11.18
+  '@types/node': 20.8.8
   eslint: 8.31.0
   esno: 0.16.3
   release-it: 15.6.0
@@ -397,8 +397,10 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node/20.8.8:
+    resolution: {integrity: sha512-YRsdVxq6OaLfmR9Hy816IMp33xOBjfyOgUd77ehqg96CFywxAPbDbXvAsuN2KVg2HOT8Eh6uAfU+l4WffwPVrQ==}
+    dependencies:
+      undici-types: 5.25.3
     dev: true
 
   /@types/normalize-package-data/2.4.1:
@@ -4196,6 +4198,10 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: true
+
+  /undici-types/5.25.3:
+    resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
     dev: true
 
   /unique-string/3.0.0:
